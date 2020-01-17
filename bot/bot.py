@@ -5,6 +5,9 @@ from random import choice
 from time import sleep
 from os import environ
 
+"""
+Big thanks to https://github.com/R3l3ntl3ss/Meme_Api
+"""
 RANDOM_MEME_LINK = "https://meme-api.herokuapp.com/gimme"
 
 class MemeBot:
@@ -12,7 +15,7 @@ class MemeBot:
 
     def __init__(self):
 
-        sleep(choice(range(1, 3600)))
+        sleep(choice(range(1, 600)))
 
         pass
 
@@ -53,7 +56,7 @@ class MemeBot:
             "text": link
         })
 
-        r = requests.post(environ['SLACK_WEBHOOK'], data=j, headers=h)
+        requests.post(environ['SLACK_WEBHOOK'], data=j, headers=h)
 
 if __name__ == "__main__":
 
