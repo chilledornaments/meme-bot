@@ -1,6 +1,8 @@
 import requests
 import json
+
 from random import choice
+from time import sleep
 
 from bot_config import *
 
@@ -9,6 +11,8 @@ class MemeBot:
 
 
     def __init__(self):
+
+        sleep(choice(range(1, 3600)))
 
         pass
 
