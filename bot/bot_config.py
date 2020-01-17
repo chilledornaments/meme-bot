@@ -1,0 +1,5 @@
+RANDOM_MEME_LINK = "https://meme-api.herokuapp.com/gimme"
+SLACK_CHANNEL = "#it"
+SLACK_ICON_EMOJI = ":vinnieasa"
+SLACK_WEBHOOK = ""
+SLACK_USERNAME = "MemeBot"
