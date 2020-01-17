@@ -15,7 +15,11 @@ class MemeBot:
 
     def __init__(self):
 
-        sleep(choice(range(1, 600)))
+        s = choice(range(1, 600))
+
+        print(f"Sleeping for {s} seconds")
+
+        sleep(s)
 
         pass
 
