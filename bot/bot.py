@@ -3,9 +3,9 @@ import json
 
 from random import choice
 from time import sleep
+from os import environ
 
-from bot_config import *
-
+RANDOM_MEME_LINK = "https://meme-api.herokuapp.com/gimme"
 
 class MemeBot:
 
@@ -46,14 +46,14 @@ class MemeBot:
         }
 
         j = json.dumps({
-            "channel": SLACK_CHANNEL,
-            "icon_emoji": SLACK_ICON_EMOJI,
+            "channel": environ['SLACK_CHANNEL'],
+            "icon_emoji": environ['SLACK_ICON_EMOJI'],
             "title": "Hot New Memes In Your Area",
-            "username": SLACK_USERNAME,
+            "username": environ['SLACK_USERNAME'],
             "text": link
         })
 
-        r = requests.post(SLACK_WEBHOOK, data=j, headers=h)
+        r = requests.post(environ['SLACK_WEBHOOK'], data=j, headers=h)
 
 if __name__ == "__main__":
 
